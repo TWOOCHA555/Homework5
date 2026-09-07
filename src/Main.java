@@ -3,30 +3,30 @@
 public class Main {
     public static void main(String[] args) {
 
-        int clientOS = 1; // Изменить значение для теста
+        int clientOS = 0; // Изменить значение для теста
 
-        if (clientOS == 0) {
+        switch (clientOS) {
+            case 0:
+                System.out.println("Установите версию приложения для iOS по ссылке");
+                break;
+            case 1:
+                System.out.println("Установите версию приложения для Android по ссылке");
+                break;
+        }
+
+
+        int clientDeviceYear = 2015; // Изменить значение для теста
+
+        if (clientDeviceYear < 2015 && clientOS == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear < 2015 && clientOS == 1) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
-        int clientOS2 = 0; // Изменить значение для теста
-        int clientDeviceYear = 2014; // Изменить значение для теста
-
-        if (clientDeviceYear < 2015) {
-            if (clientOS2 == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else if (clientOS2 == 1) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
-        } else {
-            if (clientOS2 == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else if (clientOS2 == 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
-        }
 
         int year = 2021; // Изменить значение для теста
 
